@@ -1,0 +1,49 @@
+* {
+    margin: 0 auto;
+    margin: 0;
+    overflow-y: hidden;
+}
+
+main {
+    min-height: 100vh;
+    background-color: #f5ae98;
+}
+
+.text-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: rgb(236, 227, 102);
+    padding: 8px;
+}
+
+.mensagens {
+    background-color: #cc7eeb;
+    padding: 8px;
+    padding-top: 16px;
+}
+
+.mensagem {
+    margin-top: 16px;
+}
+
+.aulas {
+    background-color: rgb(171, 255, 168);
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.aulas-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.aula {
+    margin-left: 10px;
+}
+
+.noticias {
+    background-color: #f5ae98;
+}
