@@ -1,49 +1,121 @@
-* {
-    margin: 0 auto;
-    margin: 0;
-    overflow-y: hidden;
+/* Definição de Temas */
+:root {
+    --primary-color: #0072bb;
+    --secondary-color: #005f99;
+    --background-color: white;
+    --text-color: black;
 }
 
-main {
-    min-height: 100vh;
-    background-color: #f5ae98;
+[data-theme="dark"] {
+    --primary-color: #1e1e1e;
+    --secondary-color: #333;
+    --background-color: #121212;
+    --text-color: white;
+}
+
+[data-theme="inatel"] {
+    --primary-color: #0072bb;
+    --secondary-color: #005f99;
+    --background-color: #f0f8ff;
+    --text-color: #000;
+}
+
+body {
+    font-family: 'Arimo', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    background: var(--primary-color);
+    color: white;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    background: var(--secondary-color);
+    color: white;
+    border-radius: 5px;
+    margin-top: 1vh;
+    margin-right: 28.5vh;
+}
+
+button:hover {
+    background: var(--primary-color);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background: #e0e0e0;
+}
+
+.theme-btn {
+    margin: 5px;
+    padding: 10px 20px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: black;
+}
+
+.theme-btn:hover {
+    background: #ddd;
+}
+
+.hidden {
+    display: none;
 }
 
 .text-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color: rgb(236, 227, 102);
-    padding: 8px;
+    width: 100%;
+    max-width: 400px; /* Ajuste conforme necessário */
 }
 
-.mensagens {
-    background-color: #cc7eeb;
-    padding: 8px;
-    padding-top: 16px;
-}
+/* Responsividade */
+@media (max-width: 896px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
 
-.mensagem {
-    margin-top: 16px;
-}
+    .menu-items {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between; /* Distribui os itens igualmente */
+    }
 
-.aulas {
-    background-color: rgb(171, 255, 168);
-    padding-top: 16px;
-    padding-bottom: 16px;
-}
 
-.aulas-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.aula {
-    margin-left: 10px;
-}
-
-.noticias {
-    background-color: #f5ae98;
+    .svg_logo_inatel {
+        width: 50px; /* Ajuste o tamanho do logo */
+        height: auto;
+        fill: white; /* Define a cor do SVG */
+    }
+    
+    .mensagens, .aulas, .noticias {
+        padding: 10px;
+    }
+    
+    .aulas-container {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .noticias h1 {
+        font-size: 20px;
+    }
 }
